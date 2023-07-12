@@ -1,12 +1,12 @@
 --Crear la base de datos
 CREATE DATABASE avance_proyecto
-
+USE avance_proyecto
 --Para borrar la base de datos
 /*DROP DATABASE PROYECTO
 */
 
 --Crear una tabla PERSONAS
-CREATE TABLE Persona(
+CREATE TABLE Personas(
 ID int not null,
 P_nombre VARCHAR(50) NOT NULL,
 S_nommbre VARCHAR(50) NOT NULL,
