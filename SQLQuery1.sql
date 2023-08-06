@@ -1,6 +1,33 @@
-USE avance_proyecto;
-SELECT * FROM [dbo].DIRECCIONES
-SELECT * FROM [dbo].Personas
+--Crear la base de datos
+CREATE DATABASE avance_proyecto
+USE avance_proyecto
+--Para borrar la base de datos
+/*DROP DATABASE PROYECTO
+*/
+
+--Crear una tabla PERSONAS
+CREATE TABLE Personas(
+ID INT not null,
+P_nombre VARCHAR(50) NOT NULL,
+S_nommbre VARCHAR(50) NOT NULL,
+P_apellido VARCHAR(50) NOT NULL,
+S_apelido VARCHAR(50) NOT NULL,
+F_nacimiento DATETIME NOT NULL,
+Correo VARCHAR(50) NOT NULL,
+Telefono VARCHAR(50) NOT NULL,
+ID_Direccion INT NOT NULL,
+);
+
+
+--CAMBIARLE EL NOMBRE A UNA TABLE METODO 1:
+EXEC sp_rename 'Persona', 'Personas'
+
+--Crear una tabla DIRECCIONES
+CREATE TABLE DIRECCIONES(
+ID_Direccion INT NOT NULL,
+Descripcion VARCHAR(30) NOT NULL,
+ID_Departamento INT NOT NULL
+);
 
 CREATE TABLE Calle(
 ID_Calle int not null,
@@ -133,3 +160,4 @@ UPDATE [dbo].[Departamentos] SET DESCRIPCION = 'Lempira' WHERE ID_Departamento =
 
 SELECT * FROM [dbo].[DIRECCIONES]
 SELECT * FROM [dbo].[Departamentos]
+SELECT * FROM [dbo].[Municipios]
